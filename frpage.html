@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Layout</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        #main {
+            background-color: #6E4424;
+            height: 100vh;
+        }
+
+        .content {
+            width: 50%;
+            height: 90vh;
+            background: none;
+        }
+
+        .top-content {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            height: 30%;
+            background-color: #54384B;
+            border-radius: 5px 5px 0 0;
+            padding-top: 20px;
+        }
+
+        .sub-content {
+            height: 70%;
+            background-color: bisque;
+            padding: 20px;
+        }
+
+        .info-box {
+            height: 120px;
+            border: 2px  solid#94756C;
+            border-radius: 10px;
+            padding: 10px;
+            font-weight: bold;
+        }
+        #btn{
+            vertical-align: center;
+            padding:10px;
+            margin-top:160px;
+            border-radius:7px;
+            background-color: #D7AA80;
+            font-weight:bold;
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid d-flex justify-content-center align-items-center" id="main">
+    
+
+
+        <div class="content">
+
+            <div class="top-content">
+                <h1>FRONTEND TEST</h1>
+                <h2>TOPICS: HTML CSS JS</h2>
+            </div>
+
+            <div class="sub-content" id="sub-div">
+
+                <!-- BOOTSTRAP GRID FIX -->
+                <div class="row g-4">
+                    <div class="col-4">
+                        <div class="info-box">
+                            <p>Total Marks</p>
+                            30
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="info-box">
+                            <p>Total Time</p>
+                            60 Minutes
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="info-box">
+                            <p>Total Questions</p>
+                            30
+                        </div>
+                    </div>
+                </div>
+                <a href="quiz.html">
+                <button id="btn"> START</button>
+                </a>
+                
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
