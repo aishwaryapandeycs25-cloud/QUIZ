@@ -19,15 +19,17 @@
         #main {
             background-color: #6E4424;
             height: 100vh;
+            overflow:scroll;
         }
 
         .content {
-            width: 50%;
-            height: 90vh;
+            width: 80%;
+            height: 85vh;
             background: none;
         }
 
         .top-content {
+            color:aliceblue;
             font-family: Georgia, 'Times New Roman', Times, serif;
             height: 30%;
             background-color: #54384B;
@@ -51,10 +53,20 @@
         #btn{
             vertical-align: center;
             padding:10px;
-            margin-top:160px;
+            margin-top:90px;
             border-radius:7px;
             background-color: #D7AA80;
             font-weight:bold;
+            
+        }
+        .identity{
+            display:flex;
+            align-items:center;
+            flex-direction:column;
+            color:aliceblue;
+            font-weight:bold;
+            text-align:center;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             
         }
     </style>
@@ -87,16 +99,19 @@
                     <div class="col-4">
                         <div class="info-box">
                             <p>Total Time</p>
-                            60 Minutes
+                            30 Minutes
                         </div>
                     </div>
 
                     <div class="col-4">
                         <div class="info-box">
                             <p>Total Questions</p>
-                            30
+                            15
                         </div>
                     </div>
+                    <p>This comprehensive test covers HTML basics,tags,attributes,CSS properties ,Javascript,and best
+
+                      practices.You'll have 30 minutes to complete 15 multiple-choice questions</p>
                 </div>
                 <a href="quiz.html">
                 <button id="btn"> START</button>
@@ -104,6 +119,7 @@
                 
 
             </div>
+            <div class="identity"><p>Aishwarya Pandey</p><p>First Year Btech Student at:GLA University</p>Branch:CSE-(AIML)</div>
 
         </div>
 
