@@ -1,5 +1,4 @@
-
-  let ques=  
+let ques=  
 [
   {
     "id": 1,
@@ -407,7 +406,7 @@ function showQuestions() {
       + "</button>"
       
       + "</div>";
-      text+="<div style=' justify-content:center; display:' >"+pos+"/"+15+"</div>";
+      text+="<div style=' justify-content:center; display:flex;' >"+pos+"/"+15+"</div>";
 
 
     document.getElementById("quesdiv").innerHTML = text;
@@ -455,7 +454,8 @@ function nextQ() {
         let totalScore = calculateScore();
         document.getElementById("quesdiv").innerHTML = `<h1><p >Quiz Completed!</p></h1><p>Total Score = ${totalScore} / ${random.length}</p>
         <button onclick="test()" class="btn btn-dark" style="background-color:#D7AA80; color:black; font-weight:bold;">Restart Quiz</button>`;
-    }
+        showAnswers();
+      }
 }
 
 // Previous question
@@ -474,4 +474,30 @@ function calculateScore() {
         if (userchoice[i] === random[i].answer) score++;
     }
     return score;
+}
+//Displaying answers after Quiz completion
+function showAnswers(){
+  
+
+for(let i=0;i<random.length;i++)
+{ 
+  let container=document.getElementById("quesdiv");
+  let q=random[i];
+  let user=userchoice[i];
+  let ans=q.answer;
+  let answer="";
+  answer += `
+<p style="border:2px solid black; text-align:left; margin-top:50px; margin-left:5px; ">
+    <b>Q${i + 1}:</b> ${q.question}<br>
+    ${q.options[user] === undefined 
+        ? `<b>Your Answer:Not Attempted</b><br>`
+         
+        : `<b>Your Answer:</b> ${escapeHTML(q.options[user])}<br>`
+    }
+    <b>Correct Answer:</b> ${escapeHTML(q.options[ans])}<br>
+</p>
+`;
+    document.getElementById("")
+  document.getElementById("quesdiv").innerHTML+=answer;
+}
 }

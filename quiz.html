@@ -19,12 +19,14 @@
         #mainin {
             background-color: #6E4424;
             height: 100vh;
+
         }
 
         .content {
             width: 50%;
             height: 90vh;
             background-color:#ffe4c4;
+            overflow: scroll;
         }
         button{
             margin-top: 0px;
@@ -37,6 +39,10 @@
 
 
 
+        }
+        #answers{
+            text-align: left;
+            border:1px solid black;
         }
        
 
@@ -54,7 +60,9 @@
   
 </select>
 
-        <div class="content" id="quesdiv"></div>
+        <div class="content" id="quesdiv">
+            <div id="answers" class="container-fluid"></div>
+        </div>
 
             
 
